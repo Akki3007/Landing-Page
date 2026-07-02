@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-teal-brand: #007A64;
+  --text-primary-dark: #101828;
+  --text-gray-secondary: #475467;
+  --text-gray-muted: #667085;
+  --border-card-light: #E4E7EC;
+  --bg-teal-lightest: #F0FDF9;
+  --color-white: #ffffff;
+}
+
+.services {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  background-color: var(--color-white);
+  padding: 16px 0 80px 0; /* Tightened top padding to fit naturally under SearchUtility */
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.services__container {
+  width: 100%;
+  max-width: 1140px; /* Precise desktop bounds */
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* SECTION HEADER TYPOGRAPHY */
+.services__heading-wrapper {
+  margin-bottom: 48px;
+  max-width: 950px;
+}
+
+.services__super-heading {
+  color: var(--primary-teal-brand);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  display: block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.services__title {
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--text-primary-dark);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.services__title-accent {
+  color: var(--primary-teal-brand);
+}
+
+/* HORIZONTAL SCROLL ON TABLET/MOBILE & CLEAN GRID ON DESKTOP */
+.services__grid-wrapper {
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin: 0 -16px;
+  padding-left: 16px;
+}
+
+.services__grid-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.services__grid-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--border-card-light);
+  border-radius: 10px;
+}
+
+.services__grid {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+/* CATEGORY CARD STYLING */
+.services-card {
+  width: 172px; /* Perfect spacing to scale exactly 6 cards inside desktop boundaries */
+  min-height: 280px;
+  background: var(--color-white);
+  border: 1px solid var(--border-card-light);
+  border-radius: 16px;
+  padding: 24px 16px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.services-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 25px rgba(16, 24, 40, 0.06);
+  border-color: var(--primary-teal-brand);
+}
+
+.services-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mint Green Squircle Icon Box */
+.services-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  background-color: var(--bg-teal-lightest);
+  color: var(--primary-teal-brand);
+}
+
+.services-card__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.services-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary-dark);
+  margin: 0 0 8px 0;
+  line-height: 1.35;
+}
+
+.services-card__desc {
+  font-size: 12px;
+  color: var(--text-gray-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.services-card__footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+/* Small right-facing arrow container */
+.services-card__arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #F2F4F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-gray-muted);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Smooth transition to brand colors on card hover */
+.services-card:hover .services-card__arrow {
+  background-color: var(--primary-teal-brand);
+  color: var(--color-white);
+}
+
+/* RESPONSIVE DESIGN ADJUSTMENTS */
+@media (max-width: 991px) {
+  .services__title {
+    font-size: 24px;
+  }
+}

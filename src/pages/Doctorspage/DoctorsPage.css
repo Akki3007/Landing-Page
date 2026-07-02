@@ -1,0 +1,383 @@
+.doctors-page {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.doctors-page__header {
+  margin-bottom: 30px;
+}
+
+.doctors-page__title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-slate-900);
+}
+
+.doctors-page__sub {
+  font-size: 14px;
+  color: var(--color-slate-500);
+  margin-top: 6px;
+}
+
+.doctors-page__search-bar {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--color-slate-200);
+  border-radius: 12px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  transition: var(--transition-smooth);
+}
+
+.doctors-page__search-bar:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(0, 137, 123, 0.1);
+}
+
+.search-bar-icon {
+  color: var(--color-slate-400);
+  margin-right: 12px;
+}
+
+.search-bar-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-slate-800);
+}
+
+.doctors-page__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 900px) {
+  .doctors-page__layout {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+.doctors-page__filters {
+  background-color: var(--color-slate-50);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--color-slate-100);
+  height: fit-content;
+}
+
+.doctors-page__filter-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-slate-800);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.doctors-page__filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.doctors-page__filter-btn {
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-slate-600);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.doctors-page__filter-btn:hover {
+  background-color: var(--color-slate-100);
+  color: var(--color-primary);
+}
+
+.doctors-page__filter-btn--active {
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+}
+
+.doctors-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .doctors-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.doc-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-slate-100);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.doc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 137, 123, 0.15);
+}
+
+.doc-card__body {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.doc-card__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.doc-card__name {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-slate-900);
+}
+
+.doc-card__spec {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-bg);
+  padding: 2px 8px;
+  border-radius: 99px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.doc-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  color: var(--color-slate-500);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.doc-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-slate-100);
+}
+
+.doc-card__fee-label {
+  font-size: 10px;
+  color: var(--color-slate-400);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.doc-card__fee-value {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-slate-900);
+}
+
+.doc-card__btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12.5px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.doc-card__btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.no-doctors {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--color-slate-50);
+  border-radius: 16px;
+  border: 1px dashed var(--color-slate-200);
+}
+
+.no-doctors-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.no-doctors h3 {
+  font-size: 18px;
+  color: var(--color-slate-800);
+}
+
+.no-doctors p {
+  font-size: 13px;
+  color: var(--color-slate-400);
+  margin-top: 4px;
+}
+
+/* Modal Styling */
+.booking-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.booking-modal {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 440px;
+  padding: 32px;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+}
+
+.booking-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  color: var(--color-slate-400);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.booking-modal__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-slate-900);
+  margin-bottom: 20px;
+}
+
+.booking-modal__doc-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-slate-100);
+  margin-bottom: 20px;
+}
+
+.booking-modal__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.booking-modal__doc-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-slate-900);
+}
+
+.booking-modal__doc-spec {
+  font-size: 12px;
+  color: var(--color-slate-400);
+  font-weight: 600;
+}
+
+.booking-modal__section {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--color-slate-400);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.booking-modal__slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.booking-modal__slot-btn {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-slate-200);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--color-slate-700);
+  background: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.booking-modal__slot-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.booking-modal__slot-btn--active {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary-dark);
+}
+
+.booking-modal__submit {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13.5px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.booking-modal__submit:disabled {
+  background-color: var(--color-slate-200);
+  color: var(--color-slate-400);
+  cursor: not-allowed;
+}
+
+.booking-modal__success {
+  padding: 20px 0;
+}
+
+.booking-modal__success-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #d1fae5;
+  color: #059669;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 16px auto;
+}

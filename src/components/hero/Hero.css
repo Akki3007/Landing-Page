@@ -1,0 +1,518 @@
+/* src/components/hero/Hero.css */
+
+/* ==========================================
+   HERO SECTION - Clean White Background
+========================================== */
+.hero {
+    padding: 72px 0;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+@media (min-width: 1024px) {
+    .hero__grid {
+        grid-template-columns: 7fr 5fr;
+        gap: 40px;
+    }
+}
+
+/* ==========================================
+   LEFT CONTENT (L-CONTAINER)
+========================================== */
+.hero__l-container {
+    width: 100%;
+    max-width: 572px;
+}
+
+.hero__container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* AI badge */
+.hero__frame-290 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border: 1px solid #d6f4ed;
+    border-radius: 999px;
+    background: #f4fffc;
+    margin-bottom: 28px;
+}
+
+.hero__badge-icon {
+    flex-shrink: 0;
+    color: #0f9d8a;
+}
+
+.hero__badge-text {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    color: #0f9d8a;
+    text-transform: uppercase;
+}
+
+/* Headline & Subtext */
+.hero__frame-98 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+}
+
+.hero__headline {
+    width: 100%;
+    max-width: 504px;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0em;
+    color: #0f172a;
+    margin: 0;
+    text-align: left;
+}
+
+.hero__headline-accent {
+    color: #0f9d8a;
+    font-weight: 600;
+}
+
+.hero__subtext {
+    width: 100%;
+    max-width: 504px;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    color: #64748b;
+    margin: 0;
+    text-align: left;
+}
+
+/* Action Buttons */
+.hero__frame-100 {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 48px;
+}
+
+.hero__btn-appointment,
+.hero__btn-consult {
+    height: 56px;
+    padding: 0 32px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero__btn-appointment {
+    background: #0F9D8A;
+    color: #fff;
+    border: 2px solid #0F9D8A;
+    box-shadow: 0 10px 25px rgba(15, 157, 138, .18);
+}
+
+.hero__btn-appointment:hover {
+    background: #0b8b79;
+    border-color: #0b8b79;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(15, 157, 138, .25);
+}
+
+.hero__btn-consult {
+    background: #ffffff;
+    border: 1.5px solid #0F9D8A;
+    color: #0F9D8A;
+}
+
+.hero__btn-consult:hover {
+    background: #f0fdfa;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 157, 138, .12);
+}
+
+/* Trust Signals */
+.hero__frame-88 {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    padding-top: 32px;
+    border-top: 1px solid #EAECF0;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.hero__trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.hero__trust-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    border-radius: 50%;
+    background: #EAFBF7;
+    color: #0F9D8A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.hero__trust-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.hero__trust-text-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.hero__trust-title {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #101828;
+    line-height: 14px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.hero__trust-desc {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: #667085;
+    line-height: 12px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   HERO RIGHT SIDE - IMAGE PANEL & WIDGETS
+========================================== */
+.hero__visual {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.hero__image-wrapper {
+    position: relative;
+    width: 560px;
+    height: 560px;
+}
+
+.hero__image-card {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 32px;
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+    display: block;
+}
+
+/* =========================================================
+   FLOATING WIDGETS (EXACT SPECIFICATIONS FROM FIGMA)
+========================================================= */
+.hero-widget {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;                  /* Compact Gap spacing */
+    background: #ffffff;
+    padding: 12px 18px;         /* Compact spec padding */
+    border-radius: 16px;        /* Sleek modern rounded corners */
+    
+    /* Soft ambient box shadow configured from Figma styles */
+    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.04), 
+                0px 4px 12px rgba(0, 0, 0, 0.02);
+                
+    z-index: 20;
+    min-width: auto;            /* Wraps text tightly */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.hero-widget:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 16px 36px rgba(0, 0, 0, 0.06);
+}
+
+/* UNIFIED BRAND LIGHT TINT (Mint Background & Deep Teal stroke) */
+.hero-widget__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: #E6F4F2 !important; /* Unified Figma light mint background */
+    color: #0F766E !important;            /* Unified Figma deep teal stroke */
+}
+
+.hero-widget__icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Text Container spacing */
+.hero-widget__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-widget__title {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;            /* Sleek scaled-down typography */
+    font-weight: 600;           /* Clean medium bold weight */
+    color: #0F172A;             /* Rich Slate Off-Black */
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.hero-widget__desc {
+    margin-top: 2px;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;            /* Clean labels scale */
+    font-weight: 400;
+    color: #64748B;             /* Crisp Slate Grey */
+    line-height: 1.2;
+}
+
+/* =========================================================================
+   EXACT REPOSITIONING OUTSIDE THE DOCTOR IMAGE WRAPPER BOUNDARIES
+========================================================================= */
+
+/* 1. Consult Online (Top Right - Pushed completely right of patient's hair) */
+.hero-widget--consult {
+    top: 15%;
+    right: -20px;               /* Negative inset pushes it clear of patient's hair */
+}
+
+/* 2. Find Doctors (Middle Left - Pushed completely left of doctor's white coat) */
+.hero-widget--doctors {
+    top: 38%;
+    left: -40px;                /* Negative inset pushes it to the left side in white space */
+}
+
+/* 3. Lab Tests (Bottom Center - lowered overlapping tablets/hands) */
+.hero-widget--tests {
+    bottom: 12%;
+    left: 140px;                /* Centered directly below the arms */
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+========================================================================== */
+@media (max-width: 1200px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero__grid {
+        gap: 40px;
+    }
+
+    .hero__frame-98 {
+        max-width: 480px;
+    }
+
+    .hero__headline {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    .hero__subtext {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .hero__image-wrapper {
+        width: 480px;
+        height: 480px;
+    }
+
+    .hero-widget {
+        transform: scale(.95);
+    }
+}
+
+@media (max-width: 991px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero__grid {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .hero__l-container {
+        max-width: 100%;
+    }
+
+    .hero__container-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero__frame-98 {
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .hero__headline {
+        text-align: center;
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    .hero__subtext {
+        text-align: center;
+        max-width: 600px;
+    }
+
+    .hero__frame-100 {
+        justify-content: center;
+    }
+
+    .hero__frame-88 {
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .hero__visual {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero__headline {
+        font-size: 30px;
+        line-height: 38px;
+        letter-spacing: -0.5px;
+    }
+
+    .hero__subtext {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .hero__frame-100 {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero__btn-appointment,
+    .hero__btn-consult {
+        width: 100%;
+    }
+
+    .hero__frame-88 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hero__image-wrapper {
+        width: 330px;
+        height: 330px;
+    }
+
+    .hero-widget {
+        min-width: 170px;
+        padding: 10px 14px;
+        transform: scale(.85);
+    }
+
+    .hero-widget--consult {
+        top: 15px;
+        right: -15px;
+    }
+
+    .hero-widget--doctors {
+        top: 120px;
+        left: -15px;
+    }
+
+    .hero-widget--tests {
+        bottom: 15px;
+        left: 5px;
+    }
+
+    .hero-widget__title {
+        font-size: 13px;
+    }
+
+    .hero-widget__desc {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__headline {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .hero__image-wrapper {
+        width: 290px;
+        height: 290px;
+    }
+}

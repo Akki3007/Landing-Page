@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Main Light-Theme Reset Container */
+.network {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  padding: 100px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.network__container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Heading Section */
+.network__heading {
+  text-align: center !important;
+  max-width: 850px !important;
+  margin-bottom: 70px !important;
+}
+
+/* Super-title: Bright Teal, wide tracking */
+.network__super-title {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #00a884 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  margin-bottom: 24px !important;
+  display: block !important;
+}
+
+/* Title: Clean, extremely bold dark charcoal/black */
+.network__title {
+  font-size: clamp(28px, 4vw, 38px) !important;
+  font-weight: 800 !important;
+  color: #0c111d !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+  max-width: 760px !important;
+  margin: 0 auto 20px auto !important;
+}
+
+/* Subtitle: Warm Muted Gray */
+.network__subtitle {
+  font-size: clamp(14px, 1.8vw, 15px) !important;
+  color: #8c9390 !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  max-width: 650px !important;
+  margin: 0 auto !important;
+}
+
+/* Pipeline Row */
+.network__pipeline {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  margin-bottom: 75px !important;
+  gap: 4px !important;
+}
+
+/* Node Container */
+.network-node {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  flex: 1 !important;
+  min-width: 120px !important;
+}
+
+/* Pure White Circle with fine gray border & soft shadow */
+.network-node__circle {
+  width: 84px !important;
+  height: 84px !important;
+  border-radius: 50% !important;
+  background-color: #ffffff !important;
+  border: 1px solid #f1f4f2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.network-node:hover .network-node__circle {
+  transform: scale(1.06) !important;
+}
+
+/* Icon style exactly matching target */
+.network-node__icon svg {
+  width: 42px !important;
+  height: 42px !important;
+  color: #008f72 !important; 
+}
+
+/* Node Titles */
+.network-node__title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #090d0b !important;
+  margin: 0 0 10px 0 !important;
+}
+
+/* Node Descriptions */
+.network-node__desc {
+  font-size: 12px !important;
+  color: #6b7280 !important;
+  font-weight: 400 !important;
+  line-height: 1.45 !important;
+  max-width: 160px !important;
+  margin: 0 !important;
+  white-space: pre-line !important; 
+}
+
+/* Precise Dotted Connector SVG */
+.network__arrow {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 1 !important;
+  height: 84px !important; 
+  color: #d1d5db !important; 
+}
+
+.network__arrow svg {
+  width: 100% !important;
+  max-width: 80px !important;
+}
+
+/* CTA Wrapper */
+.network__action {
+  text-align: center !important;
+}
+
+/* Perfect Deep Teal Rounded CTA Button */
+.network__btn {
+  padding: 14px 38px !important;
+  background-color: #00897b !important; 
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  cursor: pointer !important;
+  letter-spacing: 0.01em !important;
+  transition: background-color 0.2s ease, transform 0.1s ease !important;
+}
+
+.network__btn:hover {
+  background-color: #00796b !important;
+}
+
+.network__btn:active {
+  transform: scale(0.98) !important;
+}
+
+/* Responsive wraps for mobile and tablet views */
+@media (max-width: 1024px) {
+  .network__pipeline {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 48px 16px !important;
+  }
+  .network__arrow {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .network__pipeline {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
