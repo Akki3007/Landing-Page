@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ================================================================
+   FRAME 487 (1140px x Hug Content)
+================================================================ */
+.impact-frame {
+  width: 100%;
+  max-width: 1140px;
+  padding: 56px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* Active crisp system rendering matching Figma canvas */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================================================
+   HEADER BLOCK (1140px x 76px Hug)
+================================================================ */
+.impact-header {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.impact-tag {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%; /* Matches Figma 100% */
+  letter-spacing: 0%;
+  color: #096B58; /* Exact Figma Green */
+}
+
+.impact-title {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 28px; /* Matches H2/28 */
+  font-weight: 600; /* Matches Weight 600 (Semibold) */
+  line-height: 100%; /* Matches Figma 100% strictly */
+  letter-spacing: 0%; /* Matches Figma 0% */
+  color: #111928; /* Deep Navy/Black text color */
+}
+
+.impact-highlight {
+  font-size: 28px;
+  font-weight: 600; /* Matches Span weight 600 */
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #096B58; /* Exact Highlight Green Hex (#096B58) */
+}
+
+/* ================================================================
+   CARDS ROW & CARDS
+================================================================ */
+.impact-cards-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.impact-card {
+  flex: 1;
+  min-width: 0;
+  height: 233px; 
+  border-radius: 10px;
+  border: 0.5px solid #E5E7EB;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.impact-card:hover {
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  border-color: #096B58;
+}
+
+.impact-icon-wrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  border: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.icon-purple {
+  background-color: #F5EEF4;
+}
+.icon-blue {
+  background-color: #EDF4F9;
+}
+.icon-orange {
+  background-color: #FCF2EB;
+}
+
+/* ================================================================
+   TEXT GROUP
+================================================================ */
+.impact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.impact-value {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #111928;
+}
+
+.impact-label {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #6B7280;
+}
+
+/* ================================================================
+   RESPONSIVE MEDIA QUERIES
+================================================================ */
+@media (max-width: 1024px) {
+  .impact-frame {
+    padding: 56px 24px;
+  }
+  .impact-header {
+    height: auto;
+  }
+  .impact-cards-row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .impact-card {
+    flex: 0 0 calc(50% - 10px);
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .impact-frame {
+    padding: 40px 16px;
+    gap: 32px;
+  }
+  .impact-title {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  .impact-cards-row {
+    gap: 16px;
+  }
+  .impact-card {
+    flex: 0 0 100%;
+    padding: 24px;
+    height: auto;
+    gap: 24px;
+  }
+}

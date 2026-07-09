@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* ========================================= */
+/* Using Plus Jakarta Sans as fallback for   */
+/* "TypeFace" font from Figma                */
+/* ========================================= */
+:root {
+  --color-primary: #096B58;
+  --color-primary-hover: #0D8B72;
+  --color-primary-bg: #F0FDF4;
+  --color-slate-900: #1A1A1A;
+  --color-slate-500: #64748B;
+  --color-slate-200: #E2E8F0;
+  --color-slate-50: #F8FAFC;
+  --color-slate-400: #94A3B8;
+  --color-slate-700: #334155;
+  --color-gray-600: #666666;
+  --font-family: 'Plus Jakarta Sans', sans-serif;
+  --transition-smooth: all 0.2s ease-in-out;
+}
+
+footer {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* ========================================= */
+/* CTA BANNER — Frame 488                    */
+/* Width: Fixed 1140px                       */
+/* Height: Hug (566px)                       */
+/* Justify: space-between                    */
+/* Padding: 56px top, 56px bottom            */
+/* ========================================= */
+.ft-cta {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ft-cta-container {
+  max-width: 1140px;
+  width: 100%;
+  padding: 56px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 566px;
+  box-sizing: border-box;
+}
+
+/* ========================================= */
+/* CTA Image — Frame 504                     */
+/* ========================================= */
+.ft-cta-img-wrap {
+  width: 626px;
+  height: 454px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.ft-cta-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========================================= */
+/* CTA Content — Frame 997                   */
+/* Width: Fixed 304px                        */
+/* Height: Hug (111px for text area)         */
+/* Flow: Vertical                            */
+/* Gap: 16px                                 */
+/* ========================================= */
+.ft-cta-content {
+  width: 304px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ========================================= */
+/* CTA Heading — H2/28/SemiBold              */
+/* Font: TypeFace (fallback: Plus Jakarta)   */
+/* Weight: 600 (SemiBold)                    */
+/* Size: 4xl (mapped to ~28px)               */
+/* Line Height: 100%                         */
+/* Letter Spacing: 0%                        */
+/* Width: 304px, Height: 76px                */
+/* ========================================= */
+.ft-cta-h2 {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-slate-900);
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0;
+  width: 304px;
+}
+
+/* ========================================= */
+/* CTA Description Text                      */
+/* ========================================= */
+.ft-cta-p {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: #475467;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ========================================= */
+/* CTA Buttons Container — Frame 100         */
+/* Gap: 16px between buttons                 */
+/* ========================================= */
+.ft-cta-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ========================================= */
+/* SHARED BUTTON BASE                        */
+/* Width: Fill (304px)                       */
+/* Height: 48px                              */
+/* Radius: 8px                               */
+/* Border: 1px                               */
+/* Padding: 12px 20px 12px 16px              */
+/* Gap (icon ↔ text): 8px                    */
+/* ========================================= */
+.ft-btn {
+  width: 100%;
+  height: 48px;
+  padding: 12px 20px 12px 16px;
+  gap: 8px;
+
+  border-radius: 8px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  line-height: normal;
+}
+
+/* ========================================= */
+/* Button Icons — 24x24 from Figma           */
+/* (tabler:calendar & tabler:video)          */
+/* ========================================= */
+.ft-btn-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* ========================================= */
+/* Frame 88 — Book Appointment (Solid)       */
+/* Fill: #096B58 (Primary/Active)            */
+/* Border: 1px solid #096B58                 */
+/* Shadow 1: 0 1 1 0 #14B392 7%             */
+/* Shadow 2: 0 2 1 0 #108C72 7%             */
+/* Hover Fill: #0D8B72 (Primary/Hover)       */
+/* ========================================= */
+.ft-btn-solid {
+  background: #096B58;
+  color: #ffffff;
+  border: 1px solid #096B58;
+  box-shadow:
+    0px 1px 1px 0px rgba(20, 179, 146, 0.07),
+    0px 2px 1px 0px rgba(16, 140, 114, 0.07);
+}
+
+.ft-btn-solid:hover {
+  background: #0D8B72;
+  border-color: #0D8B72;
+}
+
+/* Solid button icon — always white */
+.ft-btn-solid .ft-btn-icon {
+  color: #ffffff;
+}
+
+/* ========================================= */
+/* Frame 89 — Consult Online (Outline)       */
+/* Fill: #FFFFFF                             */
+/* Border: 1px solid #096B58                 */
+/* Shadow 1: 0 1 1 0 #14B392 7%             */
+/* Shadow 2: 0 2 1 0 #14B392 7%             */
+/* Hover Fill: #0D8B72 (Primary/Hover)       */
+/* ========================================= */
+.ft-btn-outline {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #096B58;
+  box-shadow:
+    0px 1px 1px 0px rgba(20, 179, 146, 0.07),
+    0px 2px 1px 0px rgba(20, 179, 146, 0.07);
+}
+
+.ft-btn-outline:hover {
+  background: #0D8B72;
+  color: #ffffff;
+  border-color: #0D8B72;
+}
+
+/* Outline button icon — primary green default, white on hover */
+.ft-btn-outline .ft-btn-icon {
+  color: #096B58;
+  transition: color 0.2s ease;
+}
+
+.ft-btn-outline:hover .ft-btn-icon {
+  color: #ffffff;
+}
+
+/* ========================================= */
+/* FOOTER SITEMAP — 5 Column Grid            */
+/* ========================================= */
+.ft-main {
+  width: 100%;
+  border-top: 1px solid #E4E7EC;
+  padding: 56px 0 24px 0;
+}
+
+.ft-main .container {
+  max-width: 1142px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.ft-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.3fr;
+  gap: 24px;
+}
+
+/* ========================================= */
+/* Brand Column                              */
+/* ========================================= */
+.ft-brand { display: flex; flex-direction: column; gap: 16px; }
+.ft-logo { width: 136px; height: auto; display: block; }
+.ft-brand-p {
+  font-family: var(--font-family);
+  font-size: 13px;
+  color: var(--color-slate-500);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================= */
+/* Link Columns                              */
+/* ========================================= */
+.ft-col { display: flex; flex-direction: column; gap: 20px; }
+.ft-col:nth-child(3) { min-height: 166px; }
+.ft-col:nth-child(4) { min-height: 194px; }
+
+.ft-title {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin: 0;
+}
+
+.ft-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.ft-item {
+  font-family: var(--font-family);
+  font-size: 13px;
+  color: var(--color-slate-500);
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.ft-item:hover { color: var(--color-primary); }
+
+/* ========================================= */
+/* Newsletter Column                         */
+/* ========================================= */
+.ft-newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 255px;
+  width: 100%;
+  min-height: 204px;
+  box-sizing: border-box;
+}
+
+.ft-news-p {
+  font-family: var(--font-family);
+  font-size: 13px;
+  color: var(--color-slate-500);
+  margin: 0;
+  font-weight: 500;
+}
+
+.ft-form {
+  display: flex;
+  height: 40px;
+  border: 1px solid #D0D5DD;
+  border-radius: 6px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.ft-inp {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  font-family: var(--font-family);
+  font-size: 13px;
+  color: var(--color-slate-900);
+  height: 100%;
+}
+.ft-inp::placeholder { color: var(--color-slate-400); }
+
+/* ========================================= */
+/* Newsletter Submit Button                  */
+/* ========================================= */
+.ft-go {
+  background: #037043;
+  color: #ffffff;
+  border: none;
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+.ft-go:hover { background: #0D8B72; }
+
+/* ========================================= */
+/* Social Icons — 16x16, color #666666       */
+/* ========================================= */
+.ft-socials {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.ft-soc-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ft-soc-icon {
+  color: #666666;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.ft-soc-btn:hover .ft-soc-icon {
+  color: var(--color-primary);
+  transform: scale(1.15);
+}
+
+/* ========================================= */
+/* Copyright Bar — Centered single line      */
+/* ========================================= */
+.ft-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+  margin-top: 24px;
+  border-top: 1px solid var(--color-slate-200);
+}
+
+.ft-bottom-text {
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: #666666;
+  line-height: 19px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+/* ========================================= */
+/* RESPONSIVE                                */
+/* ========================================= */
+@media (max-width: 1024px) {
+  .ft-cta-container {
+    flex-direction: column;
+    min-height: auto;
+    align-items: center;
+    padding: 40px 24px;
+    gap: 40px;
+  }
+  .ft-cta-img-wrap { width: 100%; height: auto; aspect-ratio: 626 / 454; }
+  .ft-cta-content { width: 100%; }
+  .ft-cta-h2 { width: 100%; }
+  .ft-btn { width: 100%; }
+
+  .ft-grid { grid-template-columns: repeat(2, 1fr); gap: 36px; }
+  .ft-newsletter { max-width: 100%; height: auto; }
+
+  .ft-bottom { height: auto; }
+  .ft-bottom-text { line-height: 1.5; }
+}
+
+@media (max-width: 640px) {
+  .ft-cta-container { padding: 32px 16px; }
+  .ft-cta-h2 { font-size: 24px; width: 100%; }
+
+  .ft-grid { grid-template-columns: 1fr; gap: 28px; }
+  .ft-col,
+  .ft-col:nth-child(3),
+  .ft-col:nth-child(4) { min-height: auto; }
+
+  .ft-bottom-text { font-size: 10px; }
+}

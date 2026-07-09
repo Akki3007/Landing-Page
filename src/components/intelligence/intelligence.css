@@ -1,0 +1,432 @@
+/* ============================================
+   INTELLIGENCE SECTION
+   FIGMA FRAME 484 - 1140px x 658px
+   ============================================ */
+
+.intelligence-section {
+  width: 100%;
+  background: #ffffff;
+}
+
+.intel-container {
+  width: 100%;
+  max-width: 1140px;
+  min-height: 658px;
+  margin: 0 auto;
+  padding: 56px 0;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.sec-header {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.sec-tag {
+  display: block;
+  margin: 0 0 20px 0;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: #00796b;
+}
+
+.sec-title {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: -0.5px;
+
+  color: #111111;
+}
+
+
+/* ============================================
+   CARDS GRID
+   ============================================ */
+
+.intel-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+
+/* ============================================
+   CARD
+   ============================================ */
+
+.intel-card {
+  width: 100%;
+  /* Removed fixed height (435px) to match Figma 'Fill height' auto-layout */
+  height: auto; 
+
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 12px; /* Updated from 10px to match Figma */
+  box-sizing: border-box;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow:
+    0 2px 3px rgba(0, 0, 0, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  will-change: transform;
+}
+
+.intel-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.1),
+    0 3px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Focus state for accessibility */
+.intel-card:focus-visible {
+  outline: 2px solid #00796b;
+  outline-offset: 2px;
+}
+
+
+/* ============================================
+   IMAGE AREA
+   ============================================ */
+
+.intel-vis-wrap {
+  width: 100%;
+  height: 238px;
+  margin: 0;
+  background: #eef4f3; /* Updated to exact Figma Neutral/100 color */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.intel-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.intel-card:hover .intel-img {
+  transform: scale(1.05);
+}
+
+
+/* ============================================
+   CARD CONTENT
+   ============================================ */
+
+.intel-content {
+  width: 100%;
+  padding: 0 20px 24px 20px; /* Updated: 2px pad, 8px gap -> roughly 20-24px spacing */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px; /* The exact Figma "Gap: 8px" seen in properties */
+}
+
+
+/* ============================================
+   ICON + CARD TITLE
+   ============================================ */
+
+.intel-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 0 0; /* Slight margin to push it below the image area */
+}
+
+
+/* ============================================
+   ICON BACKGROUND
+   ============================================ */
+
+.intel-icon-wrap {
+  width: 38px; /* Updated from 40px to match 38px box in Figma */
+  height: 38px; 
+  min-width: 38px;
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef4f3; /* Matches Figma Neutral/100 #EEF4F3 */
+  border-radius: 12px; /* Matches Figma Radius: 12px */
+  flex-shrink: 0;
+
+  transition: background 0.2s ease;
+}
+
+.intel-card:hover .intel-icon-wrap {
+  background: #d4ebe7;
+}
+
+
+/* ============================================
+   ICON - 32px x 32px (Inner element)
+   ============================================ */
+
+.intel-icon {
+  width: 24px !important; /* Updated: Icons often scale to 24px inside 38px box */
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  display: inline-block;
+  vertical-align: middle;
+  color: #096B58;
+  flex-shrink: 0;
+
+  transition: transform 0.3s ease;
+}
+
+.intel-card:hover .intel-icon {
+  transform: scale(1.1);
+}
+
+
+/* ============================================
+   CARD BADGE (TITLE)
+   ============================================ */
+
+.intel-badge {
+  margin: 0;
+  min-height: auto;
+  display: block;
+
+  font-size: 18px; /* Updated to match h3 size in designs */
+  font-weight: 700;
+  line-height: 24px;
+  color: #111111;
+}
+
+
+/* ============================================
+   DESCRIPTION
+   ============================================ */
+
+.intel-title {
+  margin: 0;
+  min-height: auto;
+
+  font-size: 14px; /* Updated from 12px to Figma size */
+  font-weight: 400;
+  line-height: 22px; /* Increased leading for readability */
+  color: #4a4a4a; /* Updated from Teal to Dark Gray to match Figma */
+}
+
+
+/* ============================================
+   BULLET LIST
+   ============================================ */
+
+.intel-list {
+  list-style: none;
+  margin: 4px 0 0 0; /* Minor top margin */
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intel-li {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between checkmark and text */
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px; /* Updated from 12px */
+  font-weight: 400;
+  line-height: 20px;
+  color: #333333;
+}
+
+
+/* ============================================
+   CHECK ICON - 24px x 18.67px
+   ============================================ */
+
+.bullet-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin: 0;
+  color: #096B58;
+
+  transition: transform 0.2s ease;
+}
+
+.intel-li:hover .bullet-icon {
+  transform: scale(1.15);
+}
+
+
+/* ============================================
+   TABLET RESPONSIVE (4 Cols to 2 Cols)
+   ============================================ */
+
+@media (max-width: 1180px) {
+  .intel-container {
+    width: calc(100% - 48px);
+    min-height: auto;
+    padding: 56px 0;
+  }
+
+  .intel-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ============================================
+   MOBILE RESPONSIVE (2 Cols to 1 Col)
+   ============================================ */
+
+@media (max-width: 600px) {
+  .intel-container {
+    width: calc(100% - 32px);
+    padding: 48px 0;
+    gap: 32px;
+  }
+
+  .sec-tag {
+    margin-bottom: 14px;
+    font-size: 11px;
+  }
+
+  .sec-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .intel-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .intel-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .intel-vis-wrap {
+    height: 200px;
+  }
+}
+
+
+/* ============================================
+   DARK MODE SUPPORT
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .intelligence-section {
+    background: #1a1a1a;
+  }
+
+  .intel-card {
+    background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .sec-title {
+    color: #f0f0f0;
+  }
+
+  .intel-badge {
+    color: #f0f0f0;
+  }
+
+  .intel-icon-wrap {
+    background: #2a3a38;
+  }
+
+  .intel-card:hover .intel-icon-wrap {
+    background: #1f2f2d;
+  }
+
+  .intel-title {
+    color: #b0b0b0;
+  }
+
+  .intel-li {
+    color: #b0b0b0;
+  }
+
+  .intel-icon {
+    color: #4a9a8a;
+  }
+
+  .bullet-icon {
+    color: #4a9a8a;
+  }
+}
+
+
+/* ============================================
+   REDUCED MOTION PREFERENCES
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .intel-card,
+  .intel-img,
+  .intel-icon,
+  .bullet-icon,
+  .intel-icon-wrap {
+    transition-duration: 0.01ms !important;
+    transition: none !important;
+  }
+
+  .intel-card:hover {
+    transform: none !important;
+  }
+
+  .intel-card:hover .intel-img {
+    transform: none !important;
+  }
+
+  .intel-card:hover .intel-icon {
+    transform: none !important;
+  }
+
+  .intel-li:hover .bullet-icon {
+    transform: none !important;
+  }
+}

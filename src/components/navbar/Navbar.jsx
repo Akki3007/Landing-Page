@@ -262,8 +262,9 @@ export default function Navbar({ currentPage, setCurrentPage }) {
                         <span>Sign up</span>
                     </button>
 
+                    {/* ===== ONLY CHANGE: Swapped FiLogIn with FiUser ===== */}
                     <button type="button" className="navbar__btn-primary">
-                        <FiLogIn className="navbar__btn-icon" />
+                        <FiUser className="navbar__btn-icon" />
                         <span>Login</span>
                     </button>
                 </div>
@@ -354,8 +355,9 @@ export default function Navbar({ currentPage, setCurrentPage }) {
                         <span>Sign up</span>
                     </button>
 
+                    {/* ===== Mobile Login icon changed too ===== */}
                     <button type="button" className="navbar__btn-primary">
-                        <FiLogIn className="navbar__btn-icon" />
+                        <FiUser className="navbar__btn-icon" />
                         <span>Login</span>
                     </button>
                 </div>

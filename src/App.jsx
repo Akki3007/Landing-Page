@@ -1,47 +1,40 @@
-import React, { useState } from 'react';
-import Navbar from './components/navbar/Navbar.jsx';
-import LandingPage from "./pages/Landingpage/LandingPage.jsx";
-
-// Inline placeholders for missing pages to prevent compilation errors
-function DoctorsPage() {
-  return (
-    <div style={{ padding: '60px 20px', textAlign: 'center', fontFamily: 'sans-serif' }}>
-      <h2>🩺 Find Doctors & Specialists</h2>
-      <p style={{ color: '#94a3b8', fontSize: '14px', marginTop: '8px' }}>Page 2 - Coming Soon</p>
-    </div>
-  );
-}
-
-function DashboardPage() {
-  return (
-    <div style={{ padding: '60px 20px', textAlign: 'center', fontFamily: 'sans-serif' }}>
-      <h2>📊 Patient Dashboard</h2>
-      <p style={{ color: '#94a3b8', fontSize: '14px', marginTop: '8px' }}>Page 3 - Coming Soon</p>
-    </div>
-  );
-}
+import React, { useState, useCallback } from 'react';
+import Navbar from './components/navbar/Navbar';
+import LandingPage from './pages/Landingpage/LandingPage';
+import DoctorsPage from './pages/Doctorspage/DoctorsPage'; 
+import DashboardPage from './pages/Dashboardpage/DashboardPage';
+import './index.css';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('landing');
+  const [appointments, setAppointments] = useState([]);
 
-  const renderActivePage = () => {
-    switch (currentPage) {
-      case 'landing':
-        return <LandingPage onNavigate={setCurrentPage} />;
-      case 'doctors':
-        return <DoctorsPage />;
-      case 'dashboard':
-        return <DashboardPage />;
-      default:
-        return <LandingPage onNavigate={setCurrentPage} />;
-    }
-  };
+  // Navigate helper to scroll top
+  const handleNavigate = useCallback((page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  // Helper to pass data from Doctors -> Dashboard
+  const handleAddAppointment = useCallback((newAppointment) => {
+    setAppointments((prev) => [...prev, newAppointment]);
+  }, []);
 
   return (
     <div className="app-wrapper">
-      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Navbar currentPage={currentPage} setCurrentPage={handleNavigate} />
       <main>
-        {renderActivePage()}
+        {currentPage === 'landing' && <LandingPage onNavigate={handleNavigate} />}
+        
+        {/* Use exact filename case you created in /Doctorspage */}
+        {currentPage === 'doctors' && (
+          <DoctorsPage 
+            onNavigate={handleNavigate} 
+            onAddAppointment={handleAddAppointment}
+          />
+        )}
+        
+        {currentPage === 'dashboard' && <DashboardPage appointments={appointments} />}
       </main>
     </div>
   );

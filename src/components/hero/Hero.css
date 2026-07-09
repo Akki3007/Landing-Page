@@ -67,7 +67,6 @@
 /* Headline & Subtext */
 .hero__frame-98 {
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -100,7 +99,6 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
-    letter-spacing: 0em;
     color: #64748b;
     margin: 0;
     text-align: left;
@@ -128,18 +126,20 @@
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 .hero__btn-appointment {
-    background: #0F9D8A;
+    background: #005c37;
     color: #fff;
-    border: 2px solid #0F9D8A;
+    border: 2px solid #036b2b;
     box-shadow: 0 10px 25px rgba(15, 157, 138, .18);
 }
 
 .hero__btn-appointment:hover {
-    background: #0b8b79;
-    border-color: #0b8b79;
+    background: #037a487b;
+    border-color: #046b39;
     transform: translateY(-2px);
     box-shadow: 0 14px 30px rgba(15, 157, 138, .25);
 }
@@ -156,7 +156,9 @@
     box-shadow: 0 8px 20px rgba(15, 157, 138, .12);
 }
 
-/* Trust Signals */
+/* ==========================================
+   TRUST SIGNALS (4 items exactly as Figma)
+========================================== */
 .hero__frame-88 {
     display: flex;
     align-items: center;
@@ -257,25 +259,22 @@
 }
 
 /* =========================================================
-   FLOATING WIDGETS (EXACT SPECIFICATIONS FROM FIGMA)
+   FLOATING WIDGETS — EXACT FIGMA SPEC
 ========================================================= */
 .hero-widget {
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 12px;                  /* Compact Gap spacing */
+    gap: 12px;
     background: #ffffff;
-    padding: 12px 18px;         /* Compact spec padding */
-    border-radius: 16px;        /* Sleek modern rounded corners */
-    
-    /* Soft ambient box shadow configured from Figma styles */
-    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.04), 
-                0px 4px 12px rgba(0, 0, 0, 0.02);
-                
+    padding: 12px 18px;
+    border-radius: 16px;
+    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.04),
+        0px 4px 12px rgba(0, 0, 0, 0.02);
     z-index: 20;
-    min-width: auto;            /* Wraps text tightly */
+    min-width: auto;
     border: 1px solid rgba(255, 255, 255, 0.8);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-widget:hover {
@@ -283,7 +282,7 @@
     box-shadow: 0px 16px 36px rgba(0, 0, 0, 0.06);
 }
 
-/* UNIFIED BRAND LIGHT TINT (Mint Background & Deep Teal stroke) */
+/* Icon container — mint background, teal icon */
 .hero-widget__icon {
     width: 40px;
     height: 40px;
@@ -292,8 +291,8 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    background-color: #E6F4F2 !important; /* Unified Figma light mint background */
-    color: #0F766E !important;            /* Unified Figma deep teal stroke */
+    background-color: #E6F4F2 !important;
+    color: #0F766E !important;
 }
 
 .hero-widget__icon svg {
@@ -301,7 +300,7 @@
     height: 20px;
 }
 
-/* Text Container spacing */
+/* Text container */
 .hero-widget__text-container {
     display: flex;
     flex-direction: column;
@@ -310,9 +309,9 @@
 
 .hero-widget__title {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 14px;            /* Sleek scaled-down typography */
-    font-weight: 600;           /* Clean medium bold weight */
-    color: #0F172A;             /* Rich Slate Off-Black */
+    font-size: 14px;
+    font-weight: 600;
+    color: #0F172A;
     line-height: 1.2;
     margin: 0;
     letter-spacing: -0.01em;
@@ -321,37 +320,39 @@
 .hero-widget__desc {
     margin-top: 2px;
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 11px;            /* Clean labels scale */
+    font-size: 11px;
     font-weight: 400;
-    color: #64748B;             /* Crisp Slate Grey */
+    color: #64748B;
     line-height: 1.2;
 }
 
-/* =========================================================================
-   EXACT REPOSITIONING OUTSIDE THE DOCTOR IMAGE WRAPPER BOUNDARIES
-========================================================================= */
+/* =========================================================
+   WIDGET POSITIONING — EXACT FIGMA OFFSETS
+========================================================= */
 
-/* 1. Consult Online (Top Right - Pushed completely right of patient's hair) */
+/* 1. Consult Online — top right, outside the image */
 .hero-widget--consult {
     top: 15%;
-    right: -20px;               /* Negative inset pushes it clear of patient's hair */
+    right: -20px;
 }
 
-/* 2. Find Doctors (Middle Left - Pushed completely left of doctor's white coat) */
+/* 2. Find Doctors — middle left, outside the image */
 .hero-widget--doctors {
     top: 38%;
-    left: -40px;                /* Negative inset pushes it to the left side in white space */
+    left: -40px;
 }
 
-/* 3. Lab Tests (Bottom Center - lowered overlapping tablets/hands) */
+/* 3. Lab Tests — bottom center, overlapping the image slightly */
 .hero-widget--tests {
     bottom: 12%;
-    left: 140px;                /* Centered directly below the arms */
+    left: 140px;
 }
 
-/* ==========================================================================
-   RESPONSIVE MEDIA QUERIES
-========================================================================== */
+/* =========================================================
+   RESPONSIVE — MATCHES FIGMA BREAKPOINTS
+========================================================= */
+
+/* Large desktop (1200px - 1400px) */
 @media (max-width: 1200px) {
     .hero {
         padding: 60px 0;
@@ -359,10 +360,6 @@
 
     .hero__grid {
         gap: 40px;
-    }
-
-    .hero__frame-98 {
-        max-width: 480px;
     }
 
     .hero__headline {
@@ -381,10 +378,27 @@
     }
 
     .hero-widget {
-        transform: scale(.95);
+        transform: scale(0.95);
+    }
+
+    /* Adjust widget positions for medium screens */
+    .hero-widget--consult {
+        right: -10px;
+        top: 12%;
+    }
+
+    .hero-widget--doctors {
+        left: -30px;
+        top: 35%;
+    }
+
+    .hero-widget--tests {
+        left: 110px;
+        bottom: 10%;
     }
 }
 
+/* Tablet (992px - 1200px) */
 @media (max-width: 991px) {
     .hero {
         padding: 60px 0;
@@ -400,8 +414,6 @@
     }
 
     .hero__container-text {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         text-align: center;
     }
@@ -415,6 +427,7 @@
         text-align: center;
         font-size: 38px;
         line-height: 48px;
+        max-width: 100%;
     }
 
     .hero__subtext {
@@ -434,8 +447,30 @@
     .hero__visual {
         justify-content: center;
     }
+
+    .hero__image-wrapper {
+        width: 480px;
+        height: 480px;
+    }
+
+    /* Reset widget positions for tablet — move them closer */
+    .hero-widget--consult {
+        top: 10%;
+        right: -10px;
+    }
+
+    .hero-widget--doctors {
+        top: 32%;
+        left: -20px;
+    }
+
+    .hero-widget--tests {
+        bottom: 8%;
+        left: 100px;
+    }
 }
 
+/* Mobile (768px - 991px) */
 @media (max-width: 767px) {
     .hero {
         padding: 40px 0;
@@ -476,24 +511,9 @@
     }
 
     .hero-widget {
-        min-width: 170px;
+        min-width: 150px;
         padding: 10px 14px;
-        transform: scale(.85);
-    }
-
-    .hero-widget--consult {
-        top: 15px;
-        right: -15px;
-    }
-
-    .hero-widget--doctors {
-        top: 120px;
-        left: -15px;
-    }
-
-    .hero-widget--tests {
-        bottom: 15px;
-        left: 5px;
+        transform: scale(0.85);
     }
 
     .hero-widget__title {
@@ -503,16 +523,104 @@
     .hero-widget__desc {
         font-size: 11px;
     }
+
+    /* Reposition widgets for mobile — keep them visible */
+    .hero-widget--consult {
+        top: 8px;
+        right: -10px;
+    }
+
+    .hero-widget--doctors {
+        top: 100px;
+        left: -10px;
+    }
+
+    .hero-widget--tests {
+        bottom: 10px;
+        left: 20px;
+    }
 }
 
+/* Small mobile (≤480px) */
 @media (max-width: 480px) {
+    .hero {
+        padding: 32px 0;
+    }
+
     .hero__headline {
         font-size: 26px;
         line-height: 32px;
     }
 
+    .hero__subtext {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
     .hero__image-wrapper {
         width: 290px;
         height: 290px;
+    }
+
+    .hero-widget {
+        min-width: 130px;
+        padding: 8px 12px;
+        transform: scale(0.78);
+        gap: 8px;
+    }
+
+    .hero-widget__icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hero-widget__icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hero-widget__title {
+        font-size: 11px;
+    }
+
+    .hero-widget__desc {
+        font-size: 9px;
+    }
+
+    .hero-widget--consult {
+        top: 4px;
+        right: -6px;
+    }
+
+    .hero-widget--doctors {
+        top: 70px;
+        left: -6px;
+    }
+
+    .hero-widget--tests {
+        bottom: 4px;
+        left: 10px;
+    }
+}
+
+/* =========================================================
+   FIGMA GRID CONTAINER FIX
+   (ensures the hero respects the 1140px max-width)
+========================================================= */
+.hero .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 1200px) {
+    .hero .container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero .container {
+        padding: 0 16px;
     }
 }
